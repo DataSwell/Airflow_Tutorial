@@ -2,7 +2,7 @@
 
 # imports important for Airflow
 from airflow import DAG
-from airflow.operators.python_operator import PythonOperator
+from airflow.operators.python import PythonOperator
 
 # Import Modules for code
 import json
@@ -18,7 +18,7 @@ def my_extract(**kwargs):
     # TODO: Change the API Key to your key!!
 
     #Fetch the data from an API and print it
-    payload = {'Key': '5a91e86eedc148059a390511211510', 'q': 'Berlin', 'aqi': 'no'}
+    payload = {'Key': '30988773687f474d9bc11420220410', 'q': 'Berlin', 'aqi': 'no'}
     r = requests.get("http://api.weatherapi.com/v1/current.json", params=payload)
 
     # Get the json
