@@ -1,5 +1,3 @@
-
-
 import json
 import pandas as pd
 from pandas import DataFrame, json_normalize
